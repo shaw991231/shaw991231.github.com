@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SHAW</title><meta name="description"><meta name="author" content="Shaw"><meta name="copyright" content="Shaw"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.shaw1231.top/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//ta.qq.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="SHAW"><meta property="og:url" content="https://www.shaw1231.top/"><meta property="og:site_name" content="SHAW"><meta property="og:description"><meta property="og:image" content="https://i.loli.net/2020/07/25/56siRrxopTQZDJ2.jpg"><meta property="article:published_time" content="2020-08-29T06:31:20.932Z"><meta property="article:modified_time" content="2020-08-29T06:31:20.932Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = '1'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9b87e6154b6484bfa32a066675679ff3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-173571934-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-173571934-1');
+</script><script src="https://tajs.qq.com/stats?sId=66575518" charset="UTF-8" data-pjax="data-pjax"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.1.1',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-08-29 14:31:20'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.1.1"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://i.loli.net/2020/07/25/56siRrxopTQZDJ2.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">9</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/08/26/pCAaDqfmJUZnPO3.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">SHAW</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">SHAW</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/shaw991231" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shaw999.1231@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/03/22/130%20%E4%B8%AA%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A%E7%9A%84%E8%B6%85%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%EF%BC%8C%E4%B8%80%E6%AC%A1%E6%80%A7%E5%88%86%E4%BA%AB%E5%87%BA%E6%9D%A5/" title="130个相见恨晚的超实用网站，一次性分享出来">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822115019.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="130个相见恨晚的超实用网站，一次性分享出来"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/22/130%20%E4%B8%AA%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A%E7%9A%84%E8%B6%85%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%EF%BC%8C%E4%B8%80%E6%AC%A1%E6%80%A7%E5%88%86%E4%BA%AB%E5%87%BA%E6%9D%A5/" title="130个相见恨晚的超实用网站，一次性分享出来">130个相见恨晚的超实用网站，一次性分享出来</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-22T08:22:11.000Z" title="发表于 2020-03-22 16:22:11">2020-03-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></span></div><div class="content">搞学习
+CSDN： https://www.csdn.net/
+TED（最优质的演讲）：https://www.ted.com/
+谷粉学术： https://gfsoso.99lb.net/scholar.html
+大学资源网：http://www.dxzy163.com/
+简答题：http://www.jiandati.com/
+网易公开课：https://open.163.com/ted/
+网易云课堂：https://study.163.com/
+中国大学MOOC：www.icourse163.org
+网易云课堂：study.163.com
+哔哩哔哩弹幕网： www.bilibili.com
+我要自学网： www.51zxw.net
+知乎：www.zhihu.com
+学堂在线：www.xuetangx.com
+爱课程：www.icourses.cn
+猫咪论文：https://lunwen.im/
+iData（论文搜索）：www.cn-ki.net
+文泉考试：https://www.wqkaoshi.com
+
+
+找书籍
+书栈网（极力推荐）： https://www.bookstack ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/08/%E6%8E%92%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4/" title="排查网络的基本步骤">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822113439.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排查网络的基本步骤"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/08/%E6%8E%92%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4/" title="排查网络的基本步骤">排查网络的基本步骤</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-08T14:22:11.000Z" title="发表于 2020-07-08 22:22:11">2020-07-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></span></div><div class="content">排查网络的基本步骤1、网络排错的必备条件
+一些基本的计算机网络知识
+
+1.1 熟悉OSI七层模型与TCP/IP协议栈无论是OSI七层模型还是DoD模型，都是用来描述网络通信的一个过程，以便让我们对网络数据的发送和接收有一个大致的认识。OSI七层模型对应OSI七层模型的协议，同理DoD模型也是对应DoD模型的协议，也就是TCP/IP协议栈。
+TCP/IP协议栈里面的协议就显得十分重要了，比如DNS、TCP、UDP、IP、ICMP、ARP，这些最基本的应该得知道吧，我们不需要像《TCP/IP协议栈》中说得的那么细，但至少，对于这些协议的基本功能我们是必须得要知道的，这些就不是一两句可以说清楚的了，可以百度了解一下。
+1.2 了解网络通信的基础设备和其对应的OSI层次像交换机、三层交换机、路由器、防火墙这些最基本的网络设备应该要有些了解，尤其是它们对应的OSI层次以及作用，比如普通的二层交换机对应OSI七层模型中的数据链路层，它可以隔绝冲突域，同时可以通过虚拟局域网技术（VLAN）来隔绝广播域，二层交换机通过二层地址即MAC地址来实现数据帧的转发；再比如路由器，它对应网络层，可以提供路由寻址 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/26/%E6%8C%87%E9%92%88%EF%BC%881%EF%BC%89/" title="指针（1）">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822112951.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="指针（1）"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/26/%E6%8C%87%E9%92%88%EF%BC%881%EF%BC%89/" title="指针（1）">指针（1）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-26T08:22:11.000Z" title="发表于 2020-06-26 16:22:11">2020-06-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/C/">C</a></span></div><div class="content">
+指针是一种数据类型，p是指针类型变量，用来指向一个变量的地址
+
+sizeof()指针类型在内存中的大小，在32位操作系统中所有指针大小都是4个字节，在64位都是8个字节
+野指针野指针就是指针指向的位置是不可知的（随机的、不正确的、没有明确限制的）指针变量在定义时如果未初始化，其值是随机的，指针变量的值是别的变量的地址，意味着指针指向了一个地址是不确定的变量，此时去解引用就是去访问了一个不确定的地址，所以结果是不可知的。
+空指针在变量声明的时候，如果没有确切的地址可以赋值，为指针变量赋一个 NULL 值是一个良好的编程习惯。赋为 NULL 值的指针被称为空指针。NULL 指针是一个定义在标准库中的值为零的常量。一般用作于条件判断。
+零指针（万能指针）0-255都是系统保留零值指针，是值为0的指针，可以是任何一种指针类型，可以是通用变体类型void*，也可以是char*，int*等等，可以指向任何类型。
+const修饰指针如果const直接修饰变量，指针可以修改。如果const修饰指针类型（const int * p)，不能改变指针变量指向的内存地址的值，但是可以改变指向的内存地址。如果 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/25/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8motion%E7%9B%91%E6%8E%A7/" title="树莓派使用motion监控">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树莓派使用motion监控"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/25/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8motion%E7%9B%91%E6%8E%A7/" title="树莓派使用motion监控">树莓派使用motion监控</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-25T08:39:11.000Z" title="发表于 2020-06-25 16:39:11">2020-06-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a></span></div><div class="content">树莓派使用motion监控使用motion实现
+123sudo apt-get updatesudo apt-get install motionsudo nano /etc/default/motion
+把“start_motion_daemon=no”的选项改为yes。然后
+1sudo nano /etc/motion/motion.conf
+daemon onwidth 640height 480framerate 100stream_localhost off
+主要把上面这几项修改了，这个文件很长，可以使用ctl+v翻页。最后ctl+o保存，ctl+x退出。
+然后启动motion：sudo motion然后打开浏览器ip：8081即可访问。
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/24/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8mjpeg-streamer%E7%9B%91%E6%8E%A7/" title="树莓派使用mjpeg-streamer监控">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树莓派使用mjpeg-streamer监控"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/24/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8mjpeg-streamer%E7%9B%91%E6%8E%A7/" title="树莓派使用mjpeg-streamer监控">树莓派使用mjpeg-streamer监控</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-24T08:22:11.000Z" title="发表于 2020-06-24 16:22:11">2020-06-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a></span></div><div class="content">树莓派使用mjpeg-streamer监控1、下载到树莓派1wget https://github.com/jacksonliam/mjpg-streamer/archive/master.zip
+2、安装支持库和make123sudo apt-get install libjpeg8-dev //支持库sudo apt-get install cmake//makeunzip master.zip
+3、mjpg-streamer配置12cd mjpg-streamer-master/mjpg-streamer-experimental/plugins/input_raspicamvi input_raspicam.c
+在其中找到fps等属性进行修改
+4、编译1make clean all
+5、启动摄像头123456//启动普通 USB摄像头./mjpg_streamer -i &quot;./input_uvc.so&quot; -o &quot;./output_http.so -w ./www&quot;  //启动树莓派专用摄像头./mjpg_streamer -i &quot ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/23/%EF%BC%88VLC%EF%BC%89%E6%A0%91%E8%8E%93%E6%B4%BE%E6%91%84%E5%83%8F%E5%A4%B4%E4%BD%BF%E7%94%A8Source/" title="（VLC）树莓派摄像头使用Source">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="（VLC）树莓派摄像头使用Source"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/23/%EF%BC%88VLC%EF%BC%89%E6%A0%91%E8%8E%93%E6%B4%BE%E6%91%84%E5%83%8F%E5%A4%B4%E4%BD%BF%E7%94%A8Source/" title="（VLC）树莓派摄像头使用Source">（VLC）树莓派摄像头使用Source</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-23T08:22:11.000Z" title="发表于 2020-06-23 16:22:11">2020-06-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a></span></div><div class="content">（VLC）树莓派摄像头使用Source:一、树莓派摄像头这个样子的（CSI接口摄像头）：正视图后视图
+简单阐述了解CSI接口摄像头参考：http://www.cnblogs.com/lifan3a/articles/5010633.html）：
+
+全称CMOS Sensor Interface(CSI)
+前端-配置逻辑接口以便支持大多数通用的可用的CMOS摄像头接口。
+支持CCIR656视频接口以及传统的摄像头接口。
+8位数据口，支持方便YCC,YUV,Bayer或者是RGB的数据格式输入。
+完全可控的8-bit或16-bit数据到32-bit的FIFO进行打包
+32*32大小的FIFO存储接受到的的图像像素数据，该FIFO可以通过可编程的IO或者是DMA进行读取.
+后端-提供了直接到eMMA的预处理PrP块接口(PrP和PP组成了MX27图形加速器eMMA，PrP和PP能够用来给视频做预处理和后期处理，例如，放大，缩小，颜色转换)
+提供sensor的可屏蔽中断源，该中断源也是中断可控的： 开始Frame,结束Frame,Change of Field,FIFO Full
+提供给外部s ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/03/06/%E5%AE%89%E8%A3%85%E7%A7%81%E6%9C%89%E4%BA%91owncloud/" title="安装私有云owncloud">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装私有云owncloud"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/06/%E5%AE%89%E8%A3%85%E7%A7%81%E6%9C%89%E4%BA%91owncloud/" title="安装私有云owncloud">安装私有云owncloud</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-06T11:00:11.000Z" title="发表于 2020-03-06 19:00:11">2020-03-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a></span></div><div class="content">首先私有云是什么东西呢？在家里就可以搭建一个私有云，上传自己喜欢的电影或者音乐，方便与家人、好友分享。或者用在企业内部文件共享、权限管理、即时通信和文件保护 首先，我们需要了解私有云的运行条件，owncloud是基于LAMP环境才能运行的。所以什么是LAMP环境呢？请看下面的解释
+L：Linux，开源操作系统，（raspbian系统）；
+A：Apache，网页服务器；
+M：Mysql(MariaDB)，数据库
+P：PHP，编程语言。
+大概知道了owncloud的运行环境，我们就开始着手搭建私有云平台吧。
+一、安装LAMP环境1.1安装Apache 网页服务器1sudo apt-get install apache2
+
+查看Apache2是否安装成功：在浏览器输入127.0.0.1，显示it work就表示安装成功。
+1.2安装Mysql 数据库1sudo apt-get install mysql-server mysql-client
+
+如果软件源是阿里云源，或者其他源出现错误的，请使用以下命令安装：
+1sudo apt-get install mariadb-server-10.0 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/03/06/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%BF%9E%E6%8E%A5%E6%A0%91%E8%8E%93%E6%B4%BE/" title="局域网内连接树莓派">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="局域网内连接树莓派"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/06/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%BF%9E%E6%8E%A5%E6%A0%91%E8%8E%93%E6%B4%BE/" title="局域网内连接树莓派">局域网内连接树莓派</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-06T08:39:11.000Z" title="发表于 2020-03-06 16:39:11">2020-03-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a></span></div><div class="content">一、Raspberry Pi4 打开SSH服务1.有显示器的情况下：在命令行输入：
+1sudo raspi-config
+
+选择第五项：“Interfacing Options” 回车，再选择“SSH”
+
+
+最后点选“Finish”完成，等待重启即可
+2.无显示器的情况下：将SD卡使用读卡器连接到电脑上并打开sd卡盘符，直接新建“SSH”文件（无后缀）即可
+
+若是新建完还是无法开启ssh服务，此时的解决方案是烧录提供已经开启ssh服务的镜像。
+二、SSH远程登录Windows用户：下载putty软件
+我们就可以通过putty软件SSH服务远程登录树莓派操作系统了
+
+Linux/Mac用户：会用Linux就不用多解释了吧，直接用ssh -p 22 用户名@IP地址，连接就好。
+三、远程桌面连接Windows用户：win键+r 打开运行界面输入mstsc来打开远程桌面
+
+
+
+成功后的界面：
+
+使用VNC用户：1.启用树莓派VNC服务在命令行输入：
+1sudo raspi-config
+选择第五项：“Interfacing Options” 回车
+
+
+
+2.安装VNC客户端下面去 RealV ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/03/05/%E5%9B%BA%E5%AE%9A%E6%A0%91%E8%8E%93%E6%B4%BEIP%E7%9A%84%E6%96%B9%E6%B3%95/" title="固定树莓派IP的方法">     <img class="post_bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="固定树莓派IP的方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/05/%E5%9B%BA%E5%AE%9A%E6%A0%91%E8%8E%93%E6%B4%BEIP%E7%9A%84%E6%96%B9%E6%B3%95/" title="固定树莓派IP的方法">固定树莓派IP的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-05T08:39:11.000Z" title="发表于 2020-03-05 16:39:11">2020-03-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a></span></div><div class="content">在使用树莓派的过程中，DHCP往往会自动分配树莓派的IP，因此树莓派的IP地址并不是固定的，那么每次在远程登录树莓派前都需要查看一下树莓派的IP地址，非常麻烦。因此，我们手动给树莓派设定一个静态IP地址后，树莓派的IP地址就是固定的了。
+在树莓派终端输入：
+1sudo nano /etc/dhcpcd.conf
+当然你也可以使用其他更喜欢的文本编译器，进入文件后，在文件最下方找到如下图所示代码：
+如果你需要固定树莓派使用网线时的IP，你可以将注释符号“#”去掉，并将静态IP改为使用网线时的树莓派IP，路由器/网管IP地址也进行修改
+如果你需要固定树莓派使用无线时的IP，你需要将eth0改为wlan0，并将注释符号“#”去掉，将静态IP改为连接无线时的树莓派IP：
+修改完成后按ctrl+x，“y”，“enter”保存并退出文件。重启树莓派。再次在终端使用“ifconfig”命令您会发现IP地址已经发生改变。
+测试树莓派是否能联网：
+1sudo apt-get update
+
+注意：手动设置的静态IP不能跟路由器DHCP所自动分配的IP重复，否则树莓派就有可能无法正常联网。
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://i.loli.net/2020/07/25/56siRrxopTQZDJ2.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Shaw</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">9</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分类</div><div class="length_num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/shaw991231"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/shaw991231" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shaw999.1231@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/07/08/%E6%8E%92%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4/" title="排查网络的基本步骤"><img class="aside-post-bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822113439.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排查网络的基本步骤"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/07/08/%E6%8E%92%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4/" title="排查网络的基本步骤">排查网络的基本步骤</a><time class="aside-post_meta post-meta-date" datetime="2020-07-08T14:22:11.000Z" title="发表于 2020-07-08 22:22:11">2020-07-08</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/06/26/%E6%8C%87%E9%92%88%EF%BC%881%EF%BC%89/" title="指针（1）"><img class="aside-post-bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822112951.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="指针（1）"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/06/26/%E6%8C%87%E9%92%88%EF%BC%881%EF%BC%89/" title="指针（1）">指针（1）</a><time class="aside-post_meta post-meta-date" datetime="2020-06-26T08:22:11.000Z" title="发表于 2020-06-26 16:22:11">2020-06-26</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/06/25/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8motion%E7%9B%91%E6%8E%A7/" title="树莓派使用motion监控"><img class="aside-post-bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树莓派使用motion监控"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/06/25/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8motion%E7%9B%91%E6%8E%A7/" title="树莓派使用motion监控">树莓派使用motion监控</a><time class="aside-post_meta post-meta-date" datetime="2020-06-25T08:39:11.000Z" title="发表于 2020-06-25 16:39:11">2020-06-25</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/06/24/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8mjpeg-streamer%E7%9B%91%E6%8E%A7/" title="树莓派使用mjpeg-streamer监控"><img class="aside-post-bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树莓派使用mjpeg-streamer监控"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/06/24/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8mjpeg-streamer%E7%9B%91%E6%8E%A7/" title="树莓派使用mjpeg-streamer监控">树莓派使用mjpeg-streamer监控</a><time class="aside-post_meta post-meta-date" datetime="2020-06-24T08:22:11.000Z" title="发表于 2020-06-24 16:22:11">2020-06-24</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/06/23/%EF%BC%88VLC%EF%BC%89%E6%A0%91%E8%8E%93%E6%B4%BE%E6%91%84%E5%83%8F%E5%A4%B4%E4%BD%BF%E7%94%A8Source/" title="（VLC）树莓派摄像头使用Source"><img class="aside-post-bg" data-lazy-src="https://shaw-team.coding.net/p/PicImg/d/PicImg/git/raw/master/img//2020/8/22/20200822103939.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="（VLC）树莓派摄像头使用Source"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/06/23/%EF%BC%88VLC%EF%BC%89%E6%A0%91%E8%8E%93%E6%B4%BE%E6%91%84%E5%83%8F%E5%A4%B4%E4%BD%BF%E7%94%A8Source/" title="（VLC）树莓派摄像头使用Source">（VLC）树莓派摄像头使用Source</a><time class="aside-post_meta post-meta-date" datetime="2020-06-23T08:22:11.000Z" title="发表于 2020-06-23 16:22:11">2020-06-23</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C/"><span class="card-category-list-name">C</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"><span class="card-category-list-name">树莓派</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%AB%99/"><span class="card-category-list-name">网站</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 16px; color: #999">C</a> <a href="/tags/owncloud/" style="font-size: 16px; color: #999">owncloud</a> <a href="/tags/ssh/" style="font-size: 18px; color: #999ea6">ssh</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 16px; color: #999">导航</a> <a href="/tags/%E6%90%9C%E7%B4%A2/" style="font-size: 16px; color: #999">搜索</a> <a href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/" style="font-size: 16px; color: #999">摄像头</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 16px; color: #999">教程</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 22px; color: #99a9bf">树莓派</a> <a href="/tags/%E7%9B%91%E6%8E%A7/" style="font-size: 20px; color: #99a4b2">监控</a> <a href="/tags/%E7%A7%81%E6%9C%89%E4%BA%91/" style="font-size: 16px; color: #999">私有云</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16px; color: #999">笔记</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 16px; color: #999">网站</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px; color: #999">计算机网络</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 16px; color: #999">资源</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" style="font-size: 18px; color: #999ea6">远程连接</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><span class="card-archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">9</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Shaw</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="icp"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index"><img class="icp-icon" src="/img/icp.png"/><span>粤ICP备20015896号</span></a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "今日事&#44;今日畢,Time change everything".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '今日事&#44;今日畢'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script src="/js/third-party/ClickShowText.js" async="async"></script><script src="//code.tidio.co/hpylygpvnoe16qybeppefkk1waaby4lj.js" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  'meta[name=description]',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+const pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+})
+
+document.addEventListener('pjax:complete', function () {
+  refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', 'UA-173571934-1', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+})
+
+document.addEventListener('pjax:send', function () {
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+  //reset font-size
+  $('body').css('font-size') !== originFontSize && $('body').css('font-size', parseFloat(originFontSize))
+})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":320},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
