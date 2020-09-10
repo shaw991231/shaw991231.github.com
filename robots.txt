@@ -1,0 +1,7 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: www.shaw1231.top/sitemap.xml
+Sitemap: www.shaw1231.top/baidusitemap.xml
